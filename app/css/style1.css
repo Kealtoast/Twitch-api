@@ -1,7 +1,7 @@
 .info-card {
   position: relative;
   //border: 3px solid green;
-  background-image: url("https://static-cdn.jtvnw.net/previews-ttv/live_user_monstercat-640x360.jpg");
+  //background-image: url("https://static-cdn.jtvnw.net/previews-ttv/live_user_monstercat-640x360.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 190px;
