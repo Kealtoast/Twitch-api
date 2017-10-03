@@ -55,7 +55,7 @@ function getStatus(user){
             tempUserData.preview = data.profile_banner;
           }
           if (tempUserData.preview === null && data.profile_banner === null) {
-            tempUserData.preview = 'twitch';
+            tempUserData.preview = 'https://s3.amazonaws.com/indieobscura-www/assets/article/2017/04/07/best-twitch-streamers-playerunknown-battlegrounds-feature_feature.jpg';
           }
           twitchUserData.push(tempUserData);
           if (twitchUserData.length == channelArr.length){
@@ -75,7 +75,13 @@ function outputData(){
   for(var i = 0; i < twitchUserData.length; i++){
     
     htmlstring += '<div class="col-12 col-md-6 col-lg-4">';
-    htmlstring += '<div class="info-card" style="background-image:url('+twitchUserData[i].preview+');"><img class="logo" src="' + twitchUserData[i].logo + '"><div class="info-section"><p class="name">'+twitchUserData[i].display_name+'</p><p class="info">'+twitchUserData[i].info+'</p><p class="game-viewers">'+twitchUserData[i].game+' - '+twitchUserData[i].viewers+'</p></div></div></div>'
+    htmlstring += '<div class="info-card" style="background-image:url('+twitchUserData[i].preview+');"><img class="logo" src="' + twitchUserData[i].logo + '"><div class="info-section"><span class="name">'+twitchUserData[i].display_name+'</span><br><span class="info">'+twitchUserData[i].info+'</span><br><span class="game-viewers">'+twitchUserData[i].game+' - ';
+    if (twitchUserData[i].viewers !== null){
+      htmlstring += twitchUserData[i].viewers+'</span><div class="online"></div></div><a href="'+twitchUserData[i].url+'" target="_blank"><i class="fa fa-play-circle-o play"></i></a></div></div>'; 
+    } else {
+      htmlstring += 'OFFLINE</span><div class="offline"></div></div><a href="'+twitchUserData[i].url+'" target="_blank"><i class="fa fa-play-circle-o play"></i></a></div></div>';
+    }
+    
   }
   console.log(htmlstring);
   $('#output').html(htmlstring)
