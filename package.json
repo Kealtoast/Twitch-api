@@ -1,14 +1,24 @@
 {
   "name": "project_twitch-api",
   "version": "1.0.0",
-  "description": "Online Twitch data app",
+  "description": "Web App displaying information regarding twitch users",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kealtoast/twitch-api.git"
+  },
   "author": "Kevin Kealy",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kealtoast/twitch-api/issues"
+  },
+  "homepage": "https://github.com/kealtoast/twitch-api#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
   }
 }
