@@ -71,11 +71,11 @@ function getStatus(user){
 }
 
 function outputData(){
-
+  var htmlstring=' ';
   for(var i = 0; i < twitchUserData.length; i++){
-    var htmlstring;
-    htmlstring += '<div class="col-12 col-md-6 col-lg-4">'
-    htmlstring += '<div class="info-card" style="background-image:url("'+twitchUserData[i].preview+'");"><img class="logo" src="' + twitchUserData[i].logo + '"><div class="info-section"><p class="Name">'+twitchUserData[i].display_name+'</p><p class="info">'+twitchUserData[i].info+'</p><p class="game-viewers">'+twitchUserData[i].game+twitchUserData[i].viewers+'</p></div></div></div>'
+    
+    htmlstring += '<div class="col-12 col-md-6 col-lg-4">';
+    htmlstring += '<div class="info-card" style="background-image:url('+twitchUserData[i].preview+');"><img class="logo" src="' + twitchUserData[i].logo + '"><div class="info-section"><p class="name">'+twitchUserData[i].display_name+'</p><p class="info">'+twitchUserData[i].info+'</p><p class="game-viewers">'+twitchUserData[i].game+' - '+twitchUserData[i].viewers+'</p></div></div></div>'
   }
   console.log(htmlstring);
   $('#output').html(htmlstring)
