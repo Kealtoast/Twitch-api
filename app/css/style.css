@@ -1,4 +1,84 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+  background-color: black;
+}
+
+.display-btn{
+  background-color: rgba(255,255,255,.5);
+  //border:3px solid green;
+  width: 20px;
+  height: 20px;
+  list-style: none;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  transition: height 300ms ease-in-out;
+  cursor: pointer;
+}
+
+#all-btn{
+right: 70px;
+}
+
+#all-btn:hover {
+  height: 40px;
+}
+
+#online-btn {
+right: 40px;
+}
+
+#online-btn:hover {
+  height: 40px;
+}
+
+#offline-btn {
+right:10px;
+}
+
+#offline-btn:hover { 
+  height: 40px;
+}
+
+i.icon {
+  height: 15px;
+  width:15px;
+  border-radius: 100%;
+  background-color: yellow;
+  display: inline-block;
+}
+
+#all {
+  background-color: black;
+}
+
+#online {
+  background-color: rgb(0,230,0);
+}
+
+#offline {
+  background-color: rgb(77,77,77);
+}
+.wrapper {
+  background-color: rgba(255, 255, 255, .4);
+  border-radius: 10px;
+}
+
+.heading {
+  //border:3px solid green;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  position: relative;
+}
+
+.heading h1 {
+  border:3px solid rgb(255, 255, 255);
+  padding:15px;
+  display: inline-block;
+  color: white;
+  font-weight: 900;
+}
 
 .info-card {
   position: relative;
@@ -12,10 +92,6 @@
   margin-bottom: 10px;
   margin-top: 10px;
   font-family: 'Roboto', sans-serif;
-}
-
-.info-card:hover {
-  border-radius: 5px;
 }
 
 .logo {
@@ -81,7 +157,7 @@ div.offline {
 }
 
 .play {
-  color: white;
+  color: rgba(255, 255, 255, .4);
   position: absolute;
   margin-left: 40%;
   margin-right: 60%;
@@ -89,12 +165,14 @@ div.offline {
   right: 0;
   top: 45px;
   font-size: 100px;
+  transition: color 300ms ease-in-out;
 }
 
 .play:hover {
-  color: black;
+  color: rgba(255, 255, 255, .9);
+
 }
 
-a:hover {
-  color: black;
+.hide {
+  display: none;
 }
