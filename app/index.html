@@ -2,43 +2,37 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>A Pen by  Kevin Kealy</title>
-  
-  
+  <title>Twitch API Project</title>
+  <script src="https://use.fontawesome.com/6e9e887351.js"></script>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
 
-      <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  
 
   
 </head>
 
 <body>
-  <div class="container">
-  <h1>Twitch Streamers</h1>
-  <div>
-    
-  </div>
-  <div class="row justify-content-around" id="output">
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="info-card">
-        <img class="logo" src="https://static-cdn.jtvnw.net/jtv_user_pictures/monstercat-profile_image-3e109d75f8413319-300x300.jpeg">
-        <div class="info-section">
-          <p class="Name">Display Name</p>
-          <p class="info">Status</p>
-          <p class="game-viewers">game - veiwers</p>
-        </div>
+  <div class="container wrapper">
+    <div class="row">
+      <div class="heading col-12 text-center">
+        <h1>Twitch Streamers</h1>
+        <ul class="links">
+          <li class="display-btn" id="all-btn"><i class="icon" id="all"></i></li>
+          <li class="display-btn" id="online-btn"><i class="icon" id="online"></i></li>
+          <li class="display-btn" id="offline-btn"><i class="icon" id="offline"></i></li>
+        </ul>
       </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="info-card"></div>
+    <div>
+
     </div>
-    <div class="col-12 col-md-6 col-lg-4"><div class="info-card"></div></div>
-    <div class="col-12 col-md-6 col-lg-4"><div class="info-card"></div></div>
+    <div class="row justify-content-around" id="output">
+    </div>
   </div>
-</div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
-    <script  src="js/index.js"></script>
+  <script  src="js/index.js"></script>
 
 </body>
 </html>
